@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/input.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="animation-wrapper">
+      <lottie-player
+        src="https://assets10.lottiefiles.com/private_files/lf30_p5tali1o.json"
+        background="transparent"
+        speed="1"
+        style="width: 1200px; height: 600px;"
+        loop
+        autoplay
+      ></lottie-player>
+      <lottie-player
+        src="https://assets10.lottiefiles.com/private_files/lf30_p5tali1o.json"
+        background="transparent"
+        speed="1"
+        direction="-1"
+        style="width: 1200px; height: 600px; position: absolute; top: 0; left: 0;"
+        loop
+        autoplay
+      ></lottie-player>
+    </div>
+    <style>.animation-wrapper {
+        position: relative;
+        width: 1200px;
+        height: 600px;
+      }
+      
+      .animation-wrapper lottie-player {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      </style>
+  </body>
+</html>

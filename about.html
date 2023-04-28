@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/input.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button"
+            class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+              Icon when menu is open.
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex items-center text-slate-100">
+            <img class="block h-8 w-auto lg:hidden" src="img/ico1.png" alt="Your Company">
+            <img class="hidden h-8 w-auto lg:block" src="img/Shree_Ram_logo.png" alt="Your Company">
+            <div class="mx-2"></div>
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="/index.html"
+                class="text-gray-300 hover:bg-yellow-200 hover:text-red-500 rounded-md px-3 py-2 text-sm font-medium">Dashboard</a>
+
+              <a href="/team.html"
+                class="text-gray-300 hover:bg-yellow-200 hover:text-red-500 rounded-md px-3 py-2 text-sm font-medium">Team</a>
+
+              <a href="/learn.html"
+                class="text-gray-300 hover:bg-yellow-200 hover:text-red-500 rounded-md px-3 py-2 text-sm font-medium">Learnings</a>
+              <a href="/music.html"
+                class="text-gray-300 hover:bg-yellow-200 hover:text-red-500 rounded-md px-3 py-2 text-sm font-medium">Musics/Bhajans</a>
+
+              <a href="#" class="bg-yellow-500 text-orange-900 rounded-md px-3 py-2 text-sm font-medium"
+                aria-current="page">About</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <button type="button"
+            class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+            <span class="sr-only">View notifications</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+            </svg>
+          </button>
+
+          <!-- Profile dropdown -->
+          <div class="relative ml-3">
+            <div>
+              <button type="button" onclick="document.location='/chalisa.html'"
+                class="flex rounded-full mx-3 scale-150 text-sm active:scale-100" id="user-menu-button"
+                aria-expanded="false" aria-haspopup="true">
+                <span class="sr-only">Open user menu</span>
+                <img class="h-8 w-8 rounded-full" src="/img/Hanuman.jpg" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pt-2 pb-3">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="#"
+          class="text-gray-300 hover:bg-yellow-200 hover:text-red-500 rounded-md px-3 py-2 text-sm font-medium">Dashboard</a>
+
+        <a href="#"
+          class="text-gray-300 hover:bg-yellow-200 hover:text-red-500 rounded-md px-3 py-2 text-sm font-medium">Team</a>
+
+        <a href="#"
+          class="text-gray-300 hover:bg-yellow-200 hover:text-red-500 rounded-md px-3 py-2 text-sm font-medium">Learnings</a>
+
+        <a href="#" class="bg-yellow-500 text-orange-900 rounded-md px-3 py-2 text-sm font-medium"
+          aria-current="page">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="bg-white py-10 sm:py-5">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">About Us</h2>
+        <p class="mt-2 text-lg leading-8 text-gray-600">Proud Hindu. <br> Spreading Hinduism </p>
+      </div>
+      <div class="mx-auto mt-4 max-w-2xl gap-y-16 gap-x-8 border-t pt-4 sm:mt-4 sm:pt-4 lg:mx-0 lg:max-w-none">
+        <article class="flex max-w-xl flex-col items-start justify-between">
+          <div class="flex items-center gap-x-4 text-xs">
+            <time datetime="2020-03-16" class="text-gray-500">2023</time>
+            <a href="#"
+              class="relative z-10 rounded-full bg-gray-50 py-1.5 px-3 font-medium text-gray-600 hover:bg-gray-100">Jai
+              Shree Ram</a>
+          </div>
+          <div class="group relative">
+            <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+              <a href="#">
+                <span class="absolute inset-0"></span>
+                Learn About The Hindu Lord Shree Ram
+              </a>
+            </h3>
+            <p class="mt-5 text-sm leading-6 text-gray-600">Welcome to our website dedicated to Lord Shree
+              Ram and the teachings of Hinduism. Our mission is to spread knowledge and awareness about the Hindu
+              religion and its rich cultural heritage.
+
+              We believe that Lord Shree Ram is not just a mythological figure, but a source of inspiration for millions
+              of people around the world. His teachings of dharma, righteousness, and compassion are timeless and
+              relevant in today's world.
+
+              Our website provides a platform for people of all backgrounds to learn about Hinduism and its philosophy.
+              From the epic story of Ramayana to the practical aspects of yoga and meditation, we aim to provide a
+              comprehensive resource for anyone interested in exploring the depths of this ancient religion.
+
+              We also offer a range of resources and services, including online classes, discussion forums, and
+              spiritual retreats. Our team of experts and scholars is dedicated to sharing their knowledge and expertise
+              with our community.
+
+              Thank you for visiting our website. We hope that you find it informative and inspiring. Please feel free
+              to reach out to us with any questions or comments.</p>
+
+            <div class="relative mt-8 flex items-center gap-x-4">
+              <img
+                src="/img/Hanuman.jpg"
+                alt="" class="h-10 w-10 rounded-full bg-gray-50">
+              <div class="text-sm leading-6">
+                <p class="font-semibold text-gray-900">
+                  <a href="#">
+                    <span class="absolute inset-0"></span>
+                    Raushan Raj
+                  </a>
+                </p>
+                <p class="text-gray-600">Founder</p>
+              </div>
+            </div>
+        </article>
+
+        <!-- More posts... -->
+      </div>
+    </div>
+  </div>
+  <div class="conta">
+    <button id="myButton" class="bg-blue-700 mx-10 my-10 rounded-3xl py-1 px-10">0</button>
+
+  </div>
+  <script>
+    const myButton = document.getElementById("myButton");
+    let isClicked = false;
+    let a = 1;
+    myButton.addEventListener("click", function () {
+      if (isClicked) {
+        myButton.innerHTML = a;
+        isClicked = false;
+        a = a + 1;
+      } else {
+        myButton.innerHTML = a;
+        isClicked = true;
+        a = a + 1;
+      }
+    });
+  </script>
+
+
+  <!-- <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors duration-300 animate-icon">
+  <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+    <path d="M12 22a1 1 0 01-.58-.19l-8-5a1 1 0 010-1.69l8-5A1 1 0 0112 11v2.72l6.7-4.18a1 1 0 011 1.73l-8 5A1 1 0 0112 16z"/>
+    <path d="M12 2a1 1 0 01.58.19l8 5a1 1 0 010 1.69l-8 5A1 1 0 0112 13V10.28L5.3 14.46a1 1 0 11-1-1.73l8-5A1 1 0 0112 8z"/>
+  </svg>
+</button> -->
+
+  <!-- <style>
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+</style> -->
+  <br>
+  <div class="relative inline-block animate-icon">
+    <div class="absolute inset-0 flex items-center justify-center transition-opacity">
+      <i class="fas fa-circle text-green-500 text-2xl"></i>
+    </div>
+    <div class="absolute inset-0 flex items-center justify-center transition-opacity opacity-0">
+      <i class="fas fa-check text-green-500 text-2xl"></i>
+    </div>
+  </div>
+
+  <style>
+    /* Define keyframes for spin animation */
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Styles for the icon */
+    .animate-icon {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    /* Styles for the hover state of the icon */
+    .animate-icon:hover {
+      transform: rotate(360deg);
+    }
+
+    /* Styles for the icon animation on hover */
+    .animate-icon.spin:hover {
+      animation: spin 1s linear forwards;
+    }
+
+    /* Styles for the checkmark animation after the spin is complete */
+    .animate-icon.spin:hover .fa-circle {
+      animation: shrink-circle 0.2s ease-in-out forwards;
+      opacity: 1;
+    }
+
+    .animate-icon.spin:hover .fa-check {
+      animation: show-check 0.2s ease-in-out 0.2s forwards;
+      opacity: 1;
+    }
+
+    @keyframes shrink-circle {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+    }
+
+    @keyframes show-check {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+
+
+
+
+  <footer class="bg-orange-500 rounded-t-lg text-stone-900 text-xl bottom-0 inset-x-0">
+    <div class="mx-10 hover:tracking-widest1">
+      Copyright © 2023 Raushan Raj. All rights reserved. <br>
+      <span class="flex">
+        Created with<img src="/img/heart.png" alt="" class="h-7 w-8 mx-1 hover:animate-wave"> by a college student.
+      </span>
+      <div class="contacts">
+        Contacts:
+        <span class="flex">
+          <div class="flex mx-3">
+            <img src="/img/wb.png" alt="" class="h-7 w-8 mx-1">
+            <a href="https://wa.link/6e2tsb" target="_blank">
+              Whatsapp</a>
+          </div>
+          <div class="flex mx-3">
+            <img src="/img/ins.png" alt="" class="h-7 w-8 mx-1">
+            <a href="https://www.instagram.com/raushan.3935/" target="_blank">
+              Instagram</a>
+          </div>
+          <div class="flex mx-3">
+            <img src="/img/tele.png" alt="" class="h-7 w-8 mx-1">
+            <a href="https://telegram.com/" target="_blank">
+              Telegram</a>
+          </div>
+          <div class="flex mx-3">
+            <img src="/img/gt.png" alt="" class="h-7 w-8 mx-1">
+            <a href="https://github.com/rraushan1205" target="_blank">
+              GitHub</a>
+          </div>
+          <div class="flex mx-0 sm:mx-10">
+            <a href="/feedback.html"> Feedback </a>
+          </div>
+        </span>
+      </div>
+    </div>
+  </footer>
+  </div>
+</body>
+
+
+</html>
